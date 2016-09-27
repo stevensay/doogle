@@ -7,7 +7,7 @@ class Doogle extends React.Component {
       definitions: []
     };
   }
-  
+
   onInputChange(event) {
     this.setState({ word: event.target.value });
   }
@@ -79,3 +79,5 @@ class Doogle extends React.Component {
     );
   }
 }
+
+module.exports = Doogle;

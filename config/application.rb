@@ -22,5 +22,8 @@ module Workspace
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # Instruct Browserify to transform .jsx files
+    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
   end
 end
