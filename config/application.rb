@@ -24,6 +24,6 @@ module Workspace
     config.active_record.raise_in_transactional_callbacks = true
     
     # Instruct Browserify to transform .jsx files
-    config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
+    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ]"
   end
 end

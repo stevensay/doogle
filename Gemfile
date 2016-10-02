@@ -38,7 +38,7 @@ gem 'faraday'
 gem 'nokogiri'
 gem 'rails_admin'
 gem 'devise'
-gem 'browserify-rails', '~> 1.0.1'
+gem 'browserify-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

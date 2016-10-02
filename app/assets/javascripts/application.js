@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require turbolinks
+//= require turbolinks
 //= require bootstrap-sprockets
-//= require components
-//= require_tree .
+//= require react_ujs
+
+window.React = require('react');
+window.ReactDOM = require('react-dom');
+
+require('./components');

@@ -64,7 +64,7 @@ class Doogle extends React.Component {
               id="word-input"
               className="form-control"
               type="text"
-              autofocus="autofocus"
+              autoFocus="autofocus"
               value={this.state.word}
               onChange={this.onInputChange.bind(this)}
             />
