@@ -34,8 +34,16 @@ class Doogle extends React.Component {
     });
   }
   
+  hasDefinitions() {
+    return this.state.definitions && this.state.definitions.length > 0;
+  }
+  
+  hasError() {
+    return (this.state.word.length > 0) && !this.hasDefinitions(); 
+  }
+  
   renderDefinitions() {
-    if (this.state.definitions) {
+    if (this.hasDefinitions()) {
       return this.state.definitions.map( definition => {
         return (
           <li key={definition} className="definition-item">
@@ -59,7 +67,7 @@ class Doogle extends React.Component {
         </h1>
       
         <form action="/entries" method="post" onSubmit={this.onFormSubmit.bind(this)}>
-          <div className={"form-group" + (!this.state.definitions ? " has-error" : "")}>
+          <div className={"form-group" + (this.hasError() ? " has-error" : "")}>
             <input 
               id="word-input"
               className="form-control"

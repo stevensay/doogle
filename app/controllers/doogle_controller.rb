@@ -27,7 +27,7 @@ class DoogleController < ApplicationController
     if response.success?
       doc = Nokogiri::XML(response.body)
       definitions = doc.xpath("//def/dt").map { |d| d.text.sub!(/^[\: ]*/, "") }
-      
+
       unless definitions.empty?
         entry = Entry.create(word: params[:word])
         definitions.each do |definition|
