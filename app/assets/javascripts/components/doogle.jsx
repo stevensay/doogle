@@ -39,7 +39,7 @@ class Doogle extends React.Component {
   }
   
   hasError() {
-    return (this.state.word.length > 0) && !this.hasDefinitions(); 
+    return this.state.definitions == null;
   }
   
   renderDefinitions() {
