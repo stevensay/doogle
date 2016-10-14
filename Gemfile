@@ -66,6 +66,6 @@ group :test do
   gem 'database_cleaner'
 end
 
-group: :production do
+group :production do
   gem 'rails_12factor'
 end
