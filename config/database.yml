@@ -8,13 +8,13 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: ubuntu
-  password:
   timeout: 5000
   
 development:
   <<: *default
   database: doogle_development
+  username: ubuntu
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,6 +22,8 @@ development:
 test:
   <<: *default
   database: doogle_test
+  username: ubuntu
+  password:
 
 production:
   <<: *default
